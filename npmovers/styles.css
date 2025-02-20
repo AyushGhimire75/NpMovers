@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+/* Navbar */
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    transition: background 0.3s;
+    z-index: 1000;
+}
+
+.navbar.scrolled {
+    background-color: rgba(122, 121, 121, 0.8); /* Dark background when scrolling */
+}
+
+.navbar .logo img {
+    color: white;
+    height: 100px;
+    width: 100px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-right: 100px;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+}
+
+.navbar .nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    transition: color 0.3s;
+}
+
+.navbar .nav-links li a:hover,
+.navbar .nav-links li a.active {
+    color: #ffcc00;
+}
+
+/* Homepage Section */
+.homepage {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-image: url('images/home.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.homepage h2{
+    position: relative;
+    z-index: 2;
+    font-size: 70px;
+    padding-bottom: 20px;
+    margin: 0px 300px;
+    margin-top: 70px;
+}
+.homepage p {
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+    margin: 0px 170px;
+    line-height: 40px;
+}
+.call-btn{
+    background-color: blue;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 20px 50px;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 100px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    z-index: 2;
+}
+.call-btn:hover{
+    background-color: green;
+    color: white;
+}
+
+/* Services Section */
+.services-section {
+    padding: 3rem 1rem;
+    background-color: white;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-subtitle {
+    margin-top: 0.5rem;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+/* Services Container */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Individual Service Card */
+.service-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid #ddd;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Image */
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Service Title */
+.service-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #222;
+}
+
+/* Service Description */
+.service-description {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Service List */
+.service-list {
+    text-align: left;
+    margin-top: 1rem;
+    color: #444;
+    font-size: 0.95rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.service-list li {
+    margin-bottom: 0.3rem;
+}
+
+/* Call-to-Action Button */
+.service-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.service-button:hover {
+    background-color: #0056b3;
+}
